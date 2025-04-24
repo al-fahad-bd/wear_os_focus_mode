@@ -102,7 +102,15 @@ class FocusTimerScreen extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {
-                          Get.snackbar("Settings", "Not implemented yet 😅");
+                          // Get.snackbar("Settings", "Not implemented yet 😅");
+                          Get.defaultDialog(
+                            title: "Settings",
+                            middleText: "Not implemented yet 😅",
+                            confirm: ElevatedButton(
+                              onPressed: () => Get.back(),
+                              child: const Text("OK"),
+                            ),
+                          );
                         },
                         icon: const Icon(
                           LucideIcons.settings,
